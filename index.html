@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service Directory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <!-- Navbar -->
+    <nav
+      class="bg-white shadow-sm px-6 py-3 flex items-center justify-between sticky top-0 z-50"
+    >
+      <div class="flex items-center gap-2">
+        <!-- Logo -->
+        <div
+          class="w-9 h-9 rounded-full bg-red-500 flex items-center justify-center shadow"
+        >
+          <svg
+            class="w-5 h-5 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+            />
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="font-bold text-gray-800 text-sm">Emergency</div>
+          <div class="text-xs text-gray-500">Service</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <!-- Favorites -->
+        <div class="flex items-center gap-1">
+          <span class="text-gray-500 text-sm font-medium">0</span>
+          <svg
+            class="w-5 h-5 text-red-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </div>
+        <!-- Coins -->
+        <div class="flex items-center gap-1">
+          <span class="text-gray-600 text-sm font-medium">100</span>
+          <div
+            class="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center"
+          >
+            <span class="text-xs font-bold text-yellow-800">$</span>
+          </div>
+        </div>
+        <!-- Copy button -->
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-1.5 rounded-full flex items-center gap-1 transition"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+            />
+          </svg>
+          2 Copy
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div
+      class="bg-gradient-to-b from-green-800 to-green-900 text-center py-8 px-4"
+    >
+      <h1 class="text-white text-2xl font-bold mb-1">
+        Emergency Service Directory
+      </h1>
+      <p class="text-green-200 text-sm">
+        Government Emergency Services at Your Fingertip &bull; A Project by
+        Government of the People's Republic of Bangladesh
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-4 py-6">
+      <div class="flex gap-5">
+        <!-- Cards Grid -->
+        <div class="flex-1">
+          <div class="grid grid-cols-3 gap-4">
+            <!-- Card: National Emergency Number -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                National Emergency Number
+              </div>
+              <div class="text-xs text-gray-400 mb-2">National Emergency</div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">999</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >All</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Police Helpline Number -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Police Helpline Number
+              </div>
+              <div class="text-xs text-gray-400 mb-2">Police</div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">999</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >Police</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Fire Service Number -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-orange-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 23a7.5 7.5 0 01-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 3-1.5 2 2 2.5 4.5 2.5 6A7.5 7.5 0 0112 23z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Fire Service Number
+              </div>
+              <div class="text-xs text-gray-400 mb-2">Fire Service</div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">999</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >Fire</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Ambulance Service -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Ambulance Service
+              </div>
+              <div class="text-xs text-gray-400 mb-2">Ambulance</div>
+              <div class="text-2xl font-bold text-gray-800 mb-1">
+                1994-999999
+              </div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >Health</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Women & Child Helpline -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-pink-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Women & Child Helpline
+              </div>
+              <div class="text-xs text-gray-400 mb-2">
+                Women & Child Helpline
+              </div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">109</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >Help</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Anti-Corruption Helpline -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Anti-Corruption Helpline
+              </div>
+              <div class="text-xs text-gray-400 mb-2">Anti-Corruption</div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">106</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >Govt.</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Electricity Helpline -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Electricity Helpline
+              </div>
+              <div class="text-xs text-gray-400 mb-2">Electricity Outage</div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">16216</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >Electricity</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Brac Helpline -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </div>
+              <div class="font-semibold text-gray-800 text-sm">
+                Brac Helpline
+              </div>
+              <div class="text-xs text-gray-400 mb-2">Brac</div>
+              <div class="text-3xl font-bold text-gray-800 mb-1">16445</div>
+              <span
+                class="inline-block bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded mb-3"
+                >NGO</span
+              >
+              <div class="flex gap-2 mt-1">
+                <button
+                  class="flex-1 border border-gray-200 text-gray-600 text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 hover:bg-gray-50 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Copy
+                </button>
+                <button
+                  class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs py-1.5 rounded-lg flex items-center justify-center gap-1 transition"
+                >
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                    />
+                  </svg>
+                  Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Card: Bangladesh Railway Helpline -->
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 relative"
+            >
+              <button
+                class="absolute top-3 right-3 text-gray-300 hover:text-red-400 transition"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                ></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
