@@ -39,7 +39,7 @@
           <button
             class="flex items-center gap-1 text-sm hover:opacity-80 transition"
           >
-            <span>100</span>
+            <span id="coin-count">100</span>
             <span>🪙</span>
           </button>
           <button
@@ -88,7 +88,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               National Emergency Number
             </h3>
-            <p class="text-gray-400 text-xs mb-3">General Emergency</p>
+            <p class="text-gray-400 text-xs mb-3" id="NationalEmergency">National Emergency</p>
             <div class="text-4xl font-bold text-gray-900 my-3">999</div>
             <p class="text-sm text-gray-600 mb-6">All</p>
             <div class="flex gap-3 mt-auto">
@@ -98,7 +98,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="NationalEmergency"
               >
                 ☎️ Call
               </button>
@@ -120,7 +120,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Police Helpline Number
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Police</p>
+            <p class="text-gray-400 text-xs mb-3" id="Police">Police</p>
             <div class="text-4xl font-bold text-gray-900 my-3">999</div>
             <p class="text-sm text-gray-600 mb-6">Police</p>
             <div class="flex gap-3 mt-auto">
@@ -130,7 +130,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="Police"
               >
                 ☎️ Call
               </button>
@@ -152,7 +152,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Fire Service Number
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Fire</p>
+            <p class="text-gray-400 text-xs mb-3" id="FireService">Fire Service</p>
             <div class="text-4xl font-bold text-gray-900 my-3">999</div>
             <p class="text-sm text-gray-600 mb-6">Fire</p>
             <div class="flex gap-3 mt-auto">
@@ -162,7 +162,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="FireService"
               >
                 ☎️ Call
               </button>
@@ -184,7 +184,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Ambulance Service
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Ambulance</p>
+            <p class="text-gray-400 text-xs mb-3" id="Ambulance">Ambulance</p>
             <div class="text-4xl font-bold text-gray-900 my-3">1994-999999</div>
             <p class="text-sm text-gray-600 mb-6">Health</p>
             <div class="flex gap-3 mt-auto">
@@ -194,7 +194,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="Ambulance"
               >
                 ☎️ Call
               </button>
@@ -216,7 +216,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Women & Child Helpline
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Women & Child Helpline</p>
+            <p class="text-gray-400 text-xs mb-3" id="WomenChildHelpline">Women & Child Helpline</p>
             <div class="text-4xl font-bold text-gray-900 my-3">109</div>
             <p class="text-sm text-gray-600 mb-6">Help</p>
             <div class="flex gap-3 mt-auto">
@@ -226,7 +226,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="WomenChildHelpline"
               >
                 ☎️ Call
               </button>
@@ -248,7 +248,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Anti-Corruption Helpline
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Anti-Corruption</p>
+            <p class="text-gray-400 text-xs mb-3" id="AntiCorruption">Anti-Corruption</p>
             <div class="text-4xl font-bold text-gray-900 my-3">106</div>
             <p class="text-sm text-gray-600 mb-6">DG</p>
             <div class="flex gap-3 mt-auto">
@@ -258,7 +258,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="Electricity"
               >
                 ☎️ Call
               </button>
@@ -280,7 +280,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Electricity Helpline
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Electricity Problem</p>
+            <p class="text-gray-400 text-xs mb-3" id="Electricity">Electricity Problem</p>
             <div class="text-4xl font-bold text-gray-900 my-3">16216</div>
             <p class="text-sm text-gray-600 mb-6">Electricity</p>
             <div class="flex gap-3 mt-auto">
@@ -290,7 +290,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="BRAC"
               >
                 ☎️ Call
               </button>
@@ -312,7 +312,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               BRAC Helpline
             </h3>
-            <p class="text-gray-400 text-xs mb-3">BRAC</p>
+            <p class="text-gray-400 text-xs mb-3" id="BRAC">BRAC</p>
             <div class="text-4xl font-bold text-gray-900 my-3">16445</div>
             <p class="text-sm text-gray-600 mb-6">NGO</p>
             <div class="flex gap-3 mt-auto">
@@ -322,7 +322,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn" id="Railway"
               >
                 ☎️ Call
               </button>
@@ -344,7 +344,7 @@
             <h3 class="font-semibold text-gray-900 text-base mb-1">
               Bangladesh Railway Helpline
             </h3>
-            <p class="text-gray-400 text-xs mb-3">Bangladesh Railway</p>
+            <p class="text-gray-400 text-xs mb-3" id="Railway">Bangladesh Railway</p>
             <div class="text-4xl font-bold text-gray-900 my-3">163</div>
             <p class="text-sm text-gray-600 mb-6">Travel</p>
             <div class="flex gap-3 mt-auto">
@@ -354,7 +354,7 @@
                 Copy
               </button>
               <button
-                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1"
+                class="flex-1 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-medium text-sm flex items-center justify-center gap-1 card-call-btn"
               >
                 ☎️ Call
               </button>
@@ -363,8 +363,8 @@
         </div>
 
         <!-- CALL HISTORY SIDEBAR -->
-        <div class="lg:col-span-1">
-          <div class="bg-white rounded-xl border border-gray-200 shadow-sm">
+        <div class="lg:col-span-1" >
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm" id="call-history-parent">
             <div class="bg-gray-50 border-b border-gray-200 px-6 py-5 flex justify-between items-start mb-4 justify-content-center">
               <h3 class="font-semibold text-gray-900 flex items-center gap-2">
                 📞 Call History
@@ -373,68 +373,8 @@
                 Clear
               </button>
             </div>
-            <div class="max-h-96 overflow-y-auto">
-              <div
-                class="border-b border-gray-200 px-6 py-4 hover:bg-gray-50 transition"
-              >
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  Fire Service number
-                </div>
-                <div class="text-gray-600 text-sm">999</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
-              <div
-                class="border-b border-gray-200 px-6 py-4 hover:bg-gray-50 transition"
-              >
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  National Emergency Number
-                </div>
-                <div class="text-gray-600 text-sm">999</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
-              <div
-                class="border-b border-gray-200 px-6 py-4 hover:bg-gray-50 transition"
-              >
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  Fire Service number
-                </div>
-                <div class="text-gray-600 text-sm">999</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
-              <div
-                class="border-b border-gray-200 px-6 py-4 hover:bg-gray-50 transition"
-              >
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  Bangladesh Railway Helpline
-                </div>
-                <div class="text-gray-600 text-sm">163</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
-              <div
-                class="border-b border-gray-200 px-6 py-4 hover:bg-gray-50 transition"
-              >
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  Fire Service number
-                </div>
-                <div class="text-gray-600 text-sm">999</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
-              <div
-                class="border-b border-gray-200 px-6 py-4 hover:bg-gray-50 transition"
-              >
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  Anti-Corruption Helpline
-                </div>
-                <div class="text-gray-600 text-sm">106</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
-              <div class="px-6 py-4 hover:bg-gray-50 transition">
-                <div class="font-semibold text-gray-900 text-sm mb-1">
-                  Fire Service number
-                </div>
-                <div class="text-gray-600 text-sm">999</div>
-                <div class="text-gray-400 text-xs">11:35:59 AM</div>
-              </div>
+            <div class="max-h-96 overflow-y-auto" id="call-history">
+              
             </div>
           </div>
         </div>
